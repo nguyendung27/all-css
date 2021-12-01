@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    body {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+    body > div {
+        margin: auto;
+    }
+    .btn {
+        display: inline-block;
+        text-decoration: none;
+        background-color: 
+transparent;
+        border: none;
+        outline: none;
+        color: 
+#fff;
+        padding: 12px 48px;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: opacity 0.2s ease;
+    }
+    .btn--size-l {
+        padding: 16px 56px;
+    }
+    .btn--size-s {
+        padding: 8px 32px;
+    }
+    .btn:hover {
+        opacity: 0.8;
+    }
+    .btn + .btn {
+        margin-left: 16px;
+    }
+    .btn--success {
+        background-color: 
+rgb(14, 235, 51);
+    }
+    .btn--warn {
+        background-color: 
+rgb(42, 8, 235);
+    }
+    .btn--danger {
+        background-color: 
+rgb(255, 71, 80);
+    }
+    .btn--disabled {
+        opacity: 0.5 !important;
+        cursor: default;
+    }
+</style>
+<body>
+    <div>
+        <button class="btn btn--size-s btn--success">GO TO NEXT</button>
+        <button class="btn btn--size-s btn--warn">OK</button>
+        <button class="btn btn--size-s btn--danger">TRY AGAIN</button>
+    </div>
+    <div>
+        <button class="btn btn--success btn--disabled">GO TO NEXT</button>
+        <button class="btn btn--warn">OK</button>
+        <button class="btn btn--danger">TRY AGAIN</button>
+    </div>
+    <div>
+        <button class="btn btn--size-l btn--success">GO TO NEXT</button>
+        <button class="btn btn--size-l btn--warn">OK</button>
+        <button class="btn btn--size-l btn--danger">TRY AGAIN</button>
+    </div>
+</body>
+</html>
